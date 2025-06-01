@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #111;
+}
+
+
+.hero {
+    
+    font-family: 'Press Start 2P', system-ui; 
+
+   
+    background-image:
+        
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.45)), 
+        url('https://i.pinimg.com/originals/6b/83/1c/6b831cbdb6250157cd6ec1b686fd6f85.gif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #000; 
+
+    
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+
+    
+    color: #000000; 
+   
+
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero-content {
+    max-width: 900px; 
+    z-index: 2;
+    position: relative;
+}
+
+
+/* Navigation */
+nav {
+    
+    background-color: #333;
+    padding: 1rem;
+    color: rgb(232, 192, 31);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;  
+}
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+           text-decoration: none;
+            color: #6b6755;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+            font-family: "Press Start 2P";
+            font-size: 16px;
+}
+nav ul li a:hover {
+    color: rgb(232, 192, 31);
+}
+
+/* Login Page Styles */
+.login-container,
+.register-container {
+    font-family: 'Press Start 2P', cursive;
+    background-image: url('https://i.pinimg.com/736x/7f/34/b6/7f34b6f0b0b9427b6fd1ae4ee16baf35.jpg');
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.login-container h2,
+.register-container h2 {
+    
+    font-size: 36px;
+    margin-bottom: 20px;
+   
+}
+
+.login-container input,
+.register-container input {
+    
+    padding: 12px;
+    margin: 10px 0;
+    width: 250px;
+    font-size: 18px;
+    border: 1px solid #cfaeae;
+    border-radius: 5px;
+}
+
+.login-container button,
+.register-container button {
+    font-family: 'Press Start 2P', cursive;
+    padding: 12px;
+    width: 250px;
+    background-color: #8f1406;
+    color: rgb(250, 248, 248);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+    
+    background-color: #8f1406;
+}
+
+.login-container p,
+.register-container p {
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+}
+
+.login-container a,
+.register-container a {
+    font-family: 'Press Start 2P', cursive;
+    color: #8f1406;
+    text-decoration: none;
+}
+
+.login-container a:hover,
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+.game-title {
+    font-size: 4.5rem; 
+    color: #0f0f0f; 
+    margin-bottom: 25px;
+    line-height: 1.2;
+
+   
+    text-shadow:
+        0 0 4px #fffb00,  
+        0 0 8px #FFDB58,
+        0 0 12px #40c2e3; 
+
+}
+
+
+.tagline {
+    font-size: 1rem;
+    color: #f8d147; 
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5; 
+
+     text-shadow: none; 
+
+}
+
+.cta-button {
+   
+    display: inline-block;
+    background-color: #FFDB58; 
+    color: #000000; 
+    padding: 15px 35px;
+    border: 3px solid #000000; 
+    box-shadow: 5px 5px 0px #000000; 
+    font-size: 1rem; 
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    line-height: 1; 
+}
+
+.cta-button:hover {
+    background-color: #39bdc7;
+}
+
+.cta-button:active {
+    transform: translate(3px, 3px); 
+    box-shadow: 2px 2px 0px #000000;
+}
+
+
+@media (max-width: 768px) {
+    .game-title {
+        font-size: 3.5rem;
+        
+        text-shadow: 0 0 3px #25a6cd, 0 0 6px #2596b2;
+    }
+    .tagline {
+        font-size: 0.9rem;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-title {
+        font-size: 2.5rem;
+         text-shadow: 0 0 2px #46cce4, 0 0 4px #3ec3cf; 
+    }
+    .tagline {
+        font-size: 0.8rem;
+        max-width: 90%; 
+    }
+    .cta-button {
+         padding: 10px 20px;
+         font-size: 0.8rem;
+         border-width: 2px;
+         box-shadow: 3px 3px 0px #000000;
+    }
+     .cta-button:active {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px #000;
+    }
+}

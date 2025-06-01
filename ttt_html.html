@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tic Tac Toe</title>
+    <link rel="stylesheet" href="ttt_css.css">
+     <!-- Google Fonts Import for Press Start 2P -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+     <style>
+        
+        body {
+            padding-bottom: 50px; 
+            margin: 0; 
+        }
+
+        .site-footer {
+            position: fixed; 
+            left: 0;         
+            bottom: 0;       
+            width: 100%;    
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0; 
+            font-size: 14px;
+            z-index: 1000;  
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <div id="gameContainer">
+        <h1>Tic Tac Toe</h1>
+        
+        <div id="status">Player X's Turn</div>
+
+        
+        <div id="board">
+            
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button id="resetButton">Reset Game</button>
+    </div>
+    
+    <footer class="site-footer">
+        © 2025 GAMIFY-ADITI All rights reserved.
+    </footer>
+
+
+
+
+    <script src="ttt_java.js"></script>
+    
+</body>
+</html>

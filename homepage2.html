@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMIFY</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/blockblueprint-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/summer-pixel-22" rel="stylesheet">
+    <style>
+        body {
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: "Cyberpunk", sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .logo {
+            font-family: "Press Start 2P", system-ui;
+            font-size: 3rem;
+            color: yellow;
+            background-color: rgba(30, 30, 40, 0.6);
+            padding: 12px;
+            border-radius: 10px;
+            text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+        }
+
+        /* Sections */
+        .games, .heroes {
+            position: relative;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(50, 30, 80, 0.7);
+            border-radius: 14px;
+            width: 80%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+
+        .heroes {
+            background: url('about.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .game-container, .heroes-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 98%;
+        }
+
+        /* Game Cards */
+        .game-card {
+            position: relative;
+            padding: 20px;
+            border-radius: 14px;
+            width: 250px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            border: 2px solid #00bfff;
+            z-index: 2;
+        }
+
+        .game-card:hover,
+        .hero-card:hover {
+            box-shadow: 0 0 16px cyan;
+        }
+
+        .tictactoe { background: url('tictacbg.jpeg') no-repeat center center; background-size: cover; }
+        .rockpaperscissors { background: url('rpsbg.jpeg') no-repeat center center; background-size: cover; }
+        .dice { background: url('dicebg.jpeg') no-repeat center center; background-size: cover; }
+
+        .game-card h3 {
+            font-family: "BlockBlueprint-2", system-ui;
+            color: #00bfff;
+            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+            background-color: rgba(30, 30, 40, 0.8);
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .mode-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(50, 50, 50, 0.6);
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .mode-label {
+            font-family: "Summer Pixel 22", system-ui;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .game-card select {
+            font-family: "Summer Pixel 22", system-ui;
+            font-size: 0.9rem;
+            padding: 8px;
+            border: 2px solid white;
+            color: white;
+            border-radius: 6px;
+            background-color: rgba(30, 30, 40, 0.8);
+        }
+
+        /* Heroes Section */
+        .hero-card {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 14px;
+            width: 80%;
+            background-color: rgba(50, 30, 80, 0.7);
+            border: 2px solid #00bfff;
+            z-index: 2;
+        }
+
+        .hero-info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(30, 30, 40, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .hero-info-container img {
+            width: 120px;
+            border-radius: 10px; /* Square with rounded corners */
+            border: 4px solid white;
+        }
+
+        .hero-name {
+            font-family: "BlockBlueprint-2", system-ui;
+            color: white;
+            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+            padding: 12px;
+            border-radius: 6px;
+            background-color: rgba(50, 30, 40, 0.8);
+            text-align: center;
+        }
+
+        .hero-text-container {
+            padding: 15px;
+            text-align: left;
+            color: white;
+            font-family: "Summer Pixel 22", system-ui;
+            background-color: rgba(50, 30, 40, 0.7);
+            border-radius: 10px;
+            flex: 1;
+        }
+
+        /* Powerpuff Girls Title */
+        .heroes h2 {
+            font-family: "Press Start 2P", system-ui;
+            color: yellow;
+            background-color: black;
+            padding: 15px;
+            border-radius: 10px;
+            width: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">GAMIFY</h1>
+    </header>
+
+    <section class="heroes">
+        <h2>The Powerpuff Girls</h2>
+        <div class="heroes-container">
+            
+            <!-- Harshita -->
+            <div class="hero-card">
+                <div class="hero-info-container">
+                    <img src="harshita-icon.png" alt="Harshita">
+                    <h3 class="hero-name">Harshita</h3>
+                </div>
+                <div class="hero-text-container">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+                </div>
+            </div>
+
+            <!-- Vaishnavi -->
+            <div class="hero-card">
+                <div class="hero-info-container">
+                    <img src="vaishnavi-icon.png" alt="Vaishnavi">
+                    <h3 class="hero-name">Vaishnavi</h3>
+                </div>
+                <div class="hero-text-container">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+                </div>
+            </div>
+
+            <!-- Aditii -->
+            <div class="hero-card">
+                <div class="hero-info-container">
+                    <img src="aditii-icon.png" alt="Aditii">
+                    <h3 class="hero-name">Aditii</h3>
+                </div>
+                <div class="hero-text-container">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

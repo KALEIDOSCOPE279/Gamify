@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamify</title>
+    <link href="https://fonts.cdnfonts.com/css/summer-pixel-22" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        body {
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: "Cyberpunk", sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(-30px); }
+            50% { transform: translateX(30px); }
+            100% { transform: translateX(-30px); }
+        }
+
+        header {
+            font-family: "Press Start 2P", sans-serif;
+            color: white;
+            text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header h1 {
+            display: inline-block;
+            animation: moveText 5s infinite alternate ease-in-out;
+        }
+
+
+        .logo {
+            font-family: "Press Start 2P", system-ui;
+            font-size: 3rem;
+            color: yellow;
+            background-color: rgba(30, 30, 40, 0.6);
+            padding: 12px;
+            border-radius: 10px;
+            text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+        }
+
+        .games, .heroes {
+            position: relative;
+            margin: 120px auto;
+            padding: 25px;
+            background-color: rgba(50, 30, 80, 0.7);
+            border-radius: 14px;
+            width: calc(100% - 40px);
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+        .games {
+            margin: 30px auto;
+        }
+        .game-container, .heroes-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            width: 98%;
+        }
+
+        .game-card, .hero-card {
+            position: relative;
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 25px;
+            border-radius: 14px;
+            width: 300px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            border: 2px solid #00bfff;
+            z-index: 2;
+        }
+        
+        .game-card:hover {
+            background-color: rgba(50, 50, 50, 0.9);
+            box-shadow: 0 0 16px cyan;
+        }
+        .game-card h3:hover {
+            box-shadow: 0 0 12px cyan;
+            background-color: rgba(50, 30, 80, 1);
+        }
+
+
+        .game-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+        .game-card h3, .game-card p {
+            font-family: 'Press Start 2P', sans-serif;
+            font-size: 15px;
+            color: white;
+            text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+            background-color: rgba(50, 30, 80, 0.8);
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            display: block;
+            width: 90%;
+        }
+
+        .tictactoe {
+            background: url('tictacbg.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+        .box {
+            background: url("boxbg.jpeg") no-repeat center center;
+            background-size: cover;
+        }
+        .rockpaperscissors {
+            background: url('rpsbg.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .heroes {
+            background: url('about.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-card {
+            position: relative;
+            padding: 25px;
+            border-radius: 14px;
+            width: 300px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            border: 2px solid #00bfff;
+            z-index: 2;
+        }
+        .hero-card:hover {
+            background-color: rgba(50, 50, 50, 0.9);
+            box-shadow: 0 0 16px cyan;
+        }
+
+        .hero-card h3:hover {
+            box-shadow: 0 0 12px cyan;
+            background-color: rgba(50, 30, 80, 1);
+        }
+
+        .hero-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+
+        .hero-card h3, .hero-card p {
+            font-family: 'ArcadeClassic', sans-serif;
+            color: white;
+            text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+            background-color: rgba(50, 30, 80, 0.8);
+            padding: 13px;
+            border-radius: 6px;
+            text-align: center;
+            display: block;
+            width: 90%;
+        }
+
+        .hero-card p {
+            font-family: "Summer Pixel 22", system-ui;
+            font-size: 18px;
+        }
+
+        .aditii {
+            background: url('abg.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .harshita {
+            background: url('hbg.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .vaishnavi {
+            background: url('vbg.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .heroes h2 {
+            font-family: "Press Start 2P", sans-serif;
+            font-size: 40px;
+            color: yellow;
+            background-color: rgba(30, 30, 40, 0.6);
+            padding: 12px;
+            border-radius: 10px;
+            text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+            display: inline-block;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            color: rgb(232, 192, 31);
+             display: flex;
+            justify-content: space-between;
+            align-items: center;
+}
+        
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: rgb(232, 192, 31);
+            font-family: "Press Start 2P";
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            text-shadow: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6b6755;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+            font-family: "Press Start 2P";
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: rgb(232, 192, 31);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">GAMIFY</a>
+        <a href="landingpage_html.html">Home</a>
+    </nav>
+
+    <header>
+        <h1 class="logo">GAMIFY</h1>
+    </header>
+
+    <section class="games">
+        <img src="games.png" alt="Games Section" style="width: 300px; ">
+        <div class="game-container">
+            <div class="game-card tictactoe" onclick="window.location.href='ttt_html.html';">
+                <img src="tictactoe-icon.png" alt="Tic Tac Toe">
+                <h3>TIC TAC TOE</h3>
+            </div>
+            <div class="game-card rockpaperscissors" onclick="window.location.href='rps_html.html';">
+                <img src="rps-icon.png" alt="Rock Paper Scissors">
+                <h3>ROCK PAPER SCISSORS</h3>
+            </div>
+            <div class="game-card box" onclick="window.location.href='box_html.html';">
+                <img src="box.png" alt="Box">
+                <h3>CLICK THE BOX</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="heroes">
+        <h2>THE POWERPUFF GIRLS</h2>
+        <div class="heroes-container">
+            <div class="hero-card aditii" onclick="window.location.href='about_aditi_html.html';">
+                <img src="aditii-icon.png" alt="Aditii">
+                <h3>A d i t i i</h3>
+                <p>BSC Physical Science with Computer Science<br>
+                Roll No- 2024/1222</p>
+            </div>
+            <div class="hero-card harshita" onclick="window.location.href='harshita.html';">
+                <img src="harshita-icon.png" alt="Harshita">
+                <h3>H a r s h i t a</h3>
+                <p>BA Programme <br> Computer Applications+ Maths <br>
+                Roll No- 240595</p>
+            </div>
+            <div class="hero-card vaishnavi" onclick="window.location.href='about_vaishnavi_html.html';">
+                <img src="vaishnavi-icon.png" alt="Vaishnavi">
+                <h3>V a i s h n a v i</h3>
+                <p> BA Programme <br>Computer Applications+ Maths<br> 
+                Roll No- 240821</p>
+            </div>
+        </div>
+    </section>
+    <footer style="text-align: center; padding: 10px; background-color: #333; color: white; font-size: 14px;">
+    © 2025 GAMIFY-VAISHNAVI All rights reserved.
+    </footer>
+
+</body>
+</html>

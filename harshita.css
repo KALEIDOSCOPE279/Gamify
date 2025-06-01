@@ -1,0 +1,49 @@
+/* style.css */
+
+body { 
+    font-family: 'Press Start 2P', system-ui;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://i.pinimg.com/736x/5e/1b/6f/5e1b6fa188b82eb6e6450bddb7984a9a.jpg');
+
+    background-color: #000000; /* Light background color */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh; /* Ensure it takes at least full viewport height */
+}
+
+.about-container {
+    background-color: #000000; /* White background for the content block */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Limit width for better readability */
+    text-align: center; /* Center text content */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+h1 {
+    color: #9c3c3c; /* Darker color for the main heading */
+    margin-bottom: 5px;
+    font-size: 2em; /* Larger font size */
+}
+
+h2 {
+    color: #555; /* Slightly lighter color */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em; /* Smaller than H1 */
+}
+
+p {
+    color: #8f4444; /* Standard text color */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 10px; /* Space between lines/paragraphs */
+}
+
+/* Remove bottom margin from the last paragraph */
+.about-container p:last-child {
+    margin-bottom: 0;
+}

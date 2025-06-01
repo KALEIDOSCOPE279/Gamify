@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENT V - Vaishnavi</title> <!-- Unique title -->
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            background: url('about_vaishnavi_background.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Large Square-Shaped Content Container */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Centers everything inside */
+            width: 600px; /* Increased width */
+            height: 600px; /* Increased height */
+            padding: 10px; /* Slight padding for spacing */
+            background: url('agentv_container.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #A020F0; /* Neon Purple Glow */
+        }
+
+        /* Profile Image Inside the Container */
+        .profile-image {
+            width: 160px; /* Slightly larger for emphasis */
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px; /* Adjusted spacing */
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Sections - Minimal Spacing */
+        .section {
+            margin: 1px 0; /* Reduced spacing to keep elements closer */
+        }
+
+        /* Compact White Box Around "AGENT V" with Neon Purple Stroke */
+        .agent-box {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2); /* Light transparent white */
+            padding: 0px 10px; /* Reduced padding to make it more compact */
+            border-radius: 8px; /* Slightly smaller rounded corners */
+            backdrop-filter: blur(4px); /* Softer glass-like effect */
+            border: 2px solid #A020F0; /* Neon Purple stroke */
+            box-shadow: 0 0 10px rgba(160, 32, 240, 0.6); /* Slightly reduced glow */
+            line-height: 1.2; /* Reduces vertical space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px; /* Ensures height fits content naturally */
+        }
+
+        /* Alias Styling - Inside the Box */
+        .alias {
+            font-size: 40px;
+            color: #fff; /* White text */
+            text-shadow: 0 0 15px #A020F0; /* Neon Purple glow */
+        }
+
+
+        /* Real Name Styling - Vaishnavi */
+        .real-name {
+            font-size: 24px;
+            color: #FFD700;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 8px yellow; /* Soft white glow + yellow neon */
+        }
+
+        .bio {
+            font-size: 18px;
+            font-family: 'Audiowide', sans-serif; /* Retro-futuristic font */
+            max-width: 400px;
+            background-color: rgba(50, 30, 80, 0.8);
+            padding: 14px;
+            border-radius: 6px;
+            text-shadow: 0 0 6px #D100D1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Background Overlay for Futuristic Feel -->
+    <div class="overlay">
+        <div class="content">
+            <img src="agent_v.png" alt="Vaishnavi Icon" class="profile-image">
+            
+            <!-- Separated Sections -->
+            <section class="section">
+                <div class="agent-box">
+                    <h2 class="alias">AGENT V</h2>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3 class="real-name">VAISHNAVI PANWAR</h3>
+            </section>
+
+            <section class="section">
+                <p class="bio">
+                    A CREATOR, A LOGICIAN, AND A DREAMER. 
+                    TECHNOLOGY IS MY CANVAS, AND DESIGN IS MY LANGUAGE.
+                    I STRIVE FOR HARMONY BETWEEN CODE AND ART, PUSHING BEYOND LIMITS.
+                </p>
+            </section>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 10px; background-color: #333; color: white; font-size: 14px;">
+    &copy; 2025 GAMIFY-VAISHNAVI All rights reserved.
+    </footer>
+
+</body>
+</html>

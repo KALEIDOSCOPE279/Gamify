@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow: hidden; 
+
+    
+    background-image: url('https://i.pinimg.com/736x/fc/e4/c6/fce4c69c344da6fab4a6b5520505cee6.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0b0a10; 
+
+    position: relative; 
+}
+
+
+.image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* --- Text Box (Stays in Middle Right) --- */
+.text-box {
+    font-family: 'Press Start 2P', system-ui;
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 600px;
+    padding: 35px;
+    background-color: rgba(15, 15, 25, 0.75);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border: 1px solid rgba(97, 218, 251, 0.2); 
+    z-index: 10;
+}
+
+/* --- UPDATED Main Heading Styling (.name) --- */
+.name {
+    font-size: 2rem;   
+    color: #ae145a;    
+    margin-bottom: 10px; 
+    line-height: 1.3;
+    text-transform: uppercase; /* Make it uppercase */
+    /* --- Blue Neon Glow --- */
+    text-shadow:
+        0 0 3px rgba(201, 12, 119, 0.745),  /* Inner sharp glow */
+        0 0 7px rgba(235, 60, 130, 0.6),
+        0 0 12px rgba(97, 218, 251, 0.4); /* Wider halo */
+}
+
+/* --- NEW Sub Heading Styling (.sub-heading) --- */
+.sub-heading {
+    /* Font handled by parent */
+    font-size: 1.1rem;  /* Smaller than name */
+    color: #FFDB58;     /* Mustard Yellow */
+    margin-bottom: 25px; /* Spacing before description */
+    line-height: 1.4;
+    font-weight: normal; /* Pixel font usually has no bold */
+    /* --- Blue Neon Glow --- */
+    text-shadow:
+        0 0 2px rgba(12, 202, 255, 0.7),  /* Inner sharp glow (subtler) */
+        0 0 5px rgba(97, 218, 251, 0.5),
+        0 0 9px rgba(97, 218, 251, 0.3); /* Wider halo (subtler) */
+}
+
+.description {
+    /* Font handled by parent */
+    font-size: 0.8rem;
+    line-height: 1.9;
+    color: #d5d5d5;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.8); /* Keep basic shadow */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    /* Stack elements on smaller screens */
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+    }
+    .text-box {
+        position: relative;
+        width: 90%;
+        max-width: none;
+        margin: 30px auto;
+        right: auto;
+        top: auto;
+        transform: none;
+        padding: 25px;
+        z-index: 1;
+    }
+    .name {
+        font-size: 1.6rem;
+    }
+    .sub-heading {
+        font-size: 1rem;
+    }
+    .description {
+        font-size: 0.75rem;
+    }
+    body {
+         overflow: auto; /* Allow scrolling */
+    }
+}
+
+/* Optional: Further adjustments */
+@media (max-width: 480px) {
+     .name {
+        font-size: 1.4rem;
+     }
+     .sub-heading {
+        font-size: 0.9rem;
+     }
+     .description {
+        font-size: 0.7rem;
+     }
+     .text-box {
+        padding: 20px;
+     }
+     .image-container {
+         height: 40vh;
+     }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>WELCOME TO GAMIFY</title>
+    <link rel="stylesheet" href="landingpage_css.css">
+
+
+<style>
+        
+    body {
+        padding-bottom: 50px; 
+        margin: 0; 
+    }
+
+    .site-footer {
+        font-family: 'Press Start 2P', cursive;
+        position: fixed; 
+        left: 0;         
+        bottom: 0;       
+        width: 100%;    
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0; 
+        font-size: 14px;
+        z-index: 1000;  
+    }
+
+    .login-container p {
+        margin: 15px 0;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .google-signin-button {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4285F4; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+
+.google-signin-button img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    background-color: rgb(173, 16, 16);
+    padding: 2px;
+    border-radius: 2px;
+}
+    
+</style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">GAMIFY</div>
+        <ul>
+            <li><a href="landingpage_html.html">Home</a></li>
+            <li><a href="register.html">New User? Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <h2>Login to GAMIFY</h2>
+        <form action="homepage_html.html">
+            <input type="text" placeholder="Enter username" required>
+            <input type="password" placeholder="Enter password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        
+        <p>Or</p>
+
+        <button class="google-signin-button">
+            <img src="https://th.bing.com/th/id/OIP.Fll7WPtNT6jrz1oBP8GbCgHaHj?rs=1&pid=ImgDetMain" alt="Google logo"> Sign in with GOOGLE
+        </button>
+
+
+        <p>New to GAMIFY? <a href="register.html">Register here</a></p>
+    </div>
+
+    <footer class="site-footer">
+        © 2025 GAMIFY-ADITI All rights reserved.
+    </footer>
+
+   
+</body>
+
+</html>
